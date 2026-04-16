@@ -51,6 +51,8 @@
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
+    const menuArrow = select('#menu-arrow');
+    if (menuArrow) menuArrow.classList.add('hidden');
   })
 
   /**
@@ -193,6 +195,8 @@
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
       });
+      // expose isotope instance for other handlers
+      window.portfolioIsotope = portfolioIsotope;
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
@@ -316,24 +320,21 @@ $(".change").click(function () {
 // Category filtering for portfolio (fallback/simple filter by showing/hiding sections)
 document.addEventListener('DOMContentLoaded', function () {
   const flters = document.querySelectorAll('#portfolio-flters li');
-  const categories = document.querySelectorAll('.portfolio-category');
 
-  if (flters.length && categories.length) {
+  if (flters.length) {
     flters.forEach(li => li.addEventListener('click', function (e) {
       e.preventDefault();
       flters.forEach(f => f.classList.remove('filter-active'));
       li.classList.add('filter-active');
-
-      const cat = li.getAttribute('data-cat');
-      if (!cat || cat === 'all') {
-        categories.forEach(c => c.style.display = '');
-      } else {
-        categories.forEach(c => {
-          if (c.getAttribute('data-category') === cat) c.style.display = '';
-          else c.style.display = 'none';
-        });
+      // Let Isotope handle the filter; trigger a click-based filter event used by existing Isotope code
+      const filterValue = li.getAttribute('data-filter');
+      const isoEvent = new Event('click');
+      // we already have an Isotope listener earlier that uses the same selector (#portfolio-flters li)
+      // but to be safe, manually call isotope arrange if available
+      if (window.portfolioIsotope) {
+        window.portfolioIsotope.arrange({ filter: filterValue });
       }
-
+      // hide arrow when user interacts
       const arrow = document.getElementById('menu-arrow');
       if (arrow) arrow.classList.add('hidden');
     }));
