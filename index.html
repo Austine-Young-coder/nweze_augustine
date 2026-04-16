@@ -46,6 +46,11 @@
           <li><a class="change nav-link" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        <div id="menu-arrow" class="menu-arrow" aria-hidden="true">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 12h14M13 6l6 6-6 6" stroke="#63eda3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </nav><!-- .navbar -->
       <div class="social-links">
        <a href="https://www.linkedin.com/in/nweze-augustine-22a78335a?utm_source=share&utm_campaign=share_via&utm_conte9nt=profile&utm_medium=android_app" target="_blank" class="linkedin"><i
@@ -204,7 +209,16 @@
         <p>My Works</p>
       </div>
 
-      <div class="portfolio-category">
+      <ul id="portfolio-flters">
+        <li data-filter="*" data-cat="all" class="filter-active">All</li>
+        <li data-filter="*" data-cat="web">Web Development</li>
+        <li data-filter="*" data-cat="app">App Dev</li>
+        <li data-filter="*" data-cat="3d">3D</li>
+        <li data-filter="*" data-cat="circuit">Circuit Design</li>
+        <li data-filter="*" data-cat="design">Logo / Thumbnail</li>
+      </ul>
+
+      <div class="portfolio-category" data-category="web">
         <h3>Web-App Development</h3>
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item">
@@ -240,7 +254,7 @@
         </div>
       </div>
 
-      <div class="portfolio-category">
+      <div class="portfolio-category" data-category="3d">
         <h3>3D Artist (Solidworks and blender)</h3>
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item">
@@ -257,7 +271,7 @@
       </div>
 
        
-      <div class="portfolio-category">
+      <div class="portfolio-category" data-category="design">
         <h3>Logo/ Thumbnail design</h3>
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item">
@@ -272,6 +286,9 @@
           </div>
         </div>
       </div>
+
+      </div>
+
 
 
 

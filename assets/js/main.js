@@ -312,3 +312,43 @@ $(".change").click(function () {
     i = 0
   }
 });
+
+// Category filtering for portfolio (fallback/simple filter by showing/hiding sections)
+document.addEventListener('DOMContentLoaded', function () {
+  const flters = document.querySelectorAll('#portfolio-flters li');
+  const categories = document.querySelectorAll('.portfolio-category');
+
+  if (flters.length && categories.length) {
+    flters.forEach(li => li.addEventListener('click', function (e) {
+      e.preventDefault();
+      flters.forEach(f => f.classList.remove('filter-active'));
+      li.classList.add('filter-active');
+
+      const cat = li.getAttribute('data-cat');
+      if (!cat || cat === 'all') {
+        categories.forEach(c => c.style.display = '');
+      } else {
+        categories.forEach(c => {
+          if (c.getAttribute('data-category') === cat) c.style.display = '';
+          else c.style.display = 'none';
+        });
+      }
+
+      const arrow = document.getElementById('menu-arrow');
+      if (arrow) arrow.classList.add('hidden');
+    }));
+  }
+
+  // Mobile menu arrow behaviour: hide when the menu is toggled or after timeout
+  const menuToggle = document.querySelector('.mobile-nav-toggle');
+  const menuArrow = document.getElementById('menu-arrow');
+  if (menuToggle && menuArrow) {
+    menuToggle.addEventListener('click', () => {
+      menuArrow.classList.add('hidden');
+    });
+    document.querySelectorAll('#navbar .nav-link').forEach(n => n.addEventListener('click', () => {
+      menuArrow.classList.add('hidden');
+    }));
+    setTimeout(() => { menuArrow.classList.add('hidden'); }, 6000);
+  }
+});
