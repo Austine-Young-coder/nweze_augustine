@@ -51,8 +51,6 @@
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
-    const menuArrow = select('#menu-arrow');
-    if (menuArrow) menuArrow.classList.add('hidden');
   })
 
   /**
@@ -195,8 +193,6 @@
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
       });
-      // expose isotope instance for other handlers
-      window.portfolioIsotope = portfolioIsotope;
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
@@ -314,42 +310,5 @@ $(".change").click(function () {
   else {
     effect.previous();
     i = 0
-  }
-});
-
-// Category filtering for portfolio (fallback/simple filter by showing/hiding sections)
-document.addEventListener('DOMContentLoaded', function () {
-  const flters = document.querySelectorAll('#portfolio-flters li');
-
-  if (flters.length) {
-    flters.forEach(li => li.addEventListener('click', function (e) {
-      e.preventDefault();
-      flters.forEach(f => f.classList.remove('filter-active'));
-      li.classList.add('filter-active');
-      // Let Isotope handle the filter; trigger a click-based filter event used by existing Isotope code
-      const filterValue = li.getAttribute('data-filter');
-      const isoEvent = new Event('click');
-      // we already have an Isotope listener earlier that uses the same selector (#portfolio-flters li)
-      // but to be safe, manually call isotope arrange if available
-      if (window.portfolioIsotope) {
-        window.portfolioIsotope.arrange({ filter: filterValue });
-      }
-      // hide arrow when user interacts
-      const arrow = document.getElementById('menu-arrow');
-      if (arrow) arrow.classList.add('hidden');
-    }));
-  }
-
-  // Mobile menu arrow behaviour: hide when the menu is toggled or after timeout
-  const menuToggle = document.querySelector('.mobile-nav-toggle');
-  const menuArrow = document.getElementById('menu-arrow');
-  if (menuToggle && menuArrow) {
-    menuToggle.addEventListener('click', () => {
-      menuArrow.classList.add('hidden');
-    });
-    document.querySelectorAll('#navbar .nav-link').forEach(n => n.addEventListener('click', () => {
-      menuArrow.classList.add('hidden');
-    }));
-    setTimeout(() => { menuArrow.classList.add('hidden'); }, 6000);
   }
 });
