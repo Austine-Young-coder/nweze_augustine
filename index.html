@@ -57,6 +57,57 @@
     border-color:#00ff66;
     box-shadow:0 0 20px rgba(0,255,100,0.5);
 }
+
+
+  #menuArrow{
+    position: fixed;
+    top: 20px;
+    right: 65px;
+    z-index: 9999;
+    font-size: 28px;
+    color: #00ff66;
+    display: none;
+    animation: bounceArrow 1.2s infinite;
+    filter:
+        drop-shadow(
+            0 0 10px #00ff66
+        );
+}
+
+/* pulse glow */
+#menuArrow i{
+    animation:
+        pulseGlow 1.5s infinite;
+}
+
+@keyframes bounceArrow{
+    0%,100%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-8px);
+    }
+}
+
+@keyframes pulseGlow{
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.5;
+    }
+}
+
+/* desktop hide */
+@media(min-width:992px){
+    #menuArrow{
+        display:none !important;
+    }
+}
 </style>
 </head>
 
@@ -503,9 +554,55 @@ filterButtons.forEach(button => {
 
 });
 </script>
+  <script>
+document.addEventListener(
+"DOMContentLoaded", () => {
+
+    const menuArrow =
+    document.getElementById(
+        "menuArrow"
+    );
+
+    const menuButton =
+    document.querySelector(
+        ".mobile-nav-toggle"
+    );
+
+    // mobile only
+    if(window.innerWidth <= 991){
+
+        const seen =
+        localStorage.getItem(
+            "menuHintSeen"
+        );
+
+        // show only first visit
+        if(!seen){
+            menuArrow.style.display =
+                "block";
+        }
+
+        // remove forever
+        menuButton.addEventListener(
+            "click",
+            () => {
+
+            menuArrow.style.display =
+                "none";
+
+            localStorage.setItem(
+                "menuHintSeen",
+                "true"
+            );
+        });
+    }
+});
+</script>
 
   
-
+<div id="menuArrow">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+</div>
 </body>
 
 </html>
