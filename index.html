@@ -257,7 +257,7 @@
         <p>My Works</p>
       </div>
 
-<div class="portfolio-category">
+<div class="portfolio-category"  data-section="web">
         <h3>Web-App Development</h3>
         <div class="row portfolio-container" >
           <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
@@ -293,7 +293,14 @@
     
 
       
-          <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+        
+  
+     </div>
+
+      <div class="portfolio-category" data-section="ai">
+        <h3>AI/ ML</h3>
+        <div class="row portfolio-container">
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="ai">
             <div class="portfolio-wrap">
               <img src="assets/img/arti.jpg" loading="lazy" class="img-fluid" alt="Arti-Nil">
               <div class="portfolio-info">
@@ -303,27 +310,11 @@
               </div>
             </div>
           </div>
-  
-     </div>
-
-      <div class="portfolio-category">
-        <h3>AI/ ML</h3>
-        <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item" data-category="ai">
-            <div class="portfolio-wrap">
-              <img src="assets/img/bg.jpg" class="img-fluid" alt="2D Track-and-Run Game">
-              <div class="portfolio-info">
-                <h4>work still loading</h4>
-                <p><i>UNAVIALABLE</i></p>
-                <a href="#" class="btn btn-primary" target="_blank">Preview</a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
        
-      <div class="portfolio-category">
+      <div class="portfolio-category" data-section="3d">
         <h3>3D Modelling</h3>
         <div class="row portfolio-container">
           <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
@@ -424,45 +415,95 @@
   <script src="assets/hover/hover-effect.umd.js"></script>
   <script src="assets/js/main.js"></script>
   
-    <script>
+    
+<script>
 const filterButtons =
 document.querySelectorAll(".filter-btn");
 
 const portfolioItems =
 document.querySelectorAll(".portfolio-item");
 
+const portfolioSections =
+document.querySelectorAll(
+    ".portfolio-category"
+);
+
 filterButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
+        // Active button
         document
-        .querySelector(".filter-btn.active")
-        .classList.remove("active");
+            .querySelectorAll(
+                ".filter-btn"
+            )
+            .forEach(btn =>
+                btn.classList.remove(
+                    "active"
+                )
+            );
 
-        button.classList.add("active");
+        button.classList.add(
+            "active"
+        );
 
         const filter =
-        button.getAttribute("data-filter");
+        button.getAttribute(
+            "data-filter"
+        );
 
+        // Show/hide portfolio items
         portfolioItems.forEach(item => {
+
+            const category =
+            item.getAttribute(
+                "data-category"
+            );
 
             if (
                 filter === "all" ||
-                item.getAttribute(
-                  "data-category"
-                ) === filter
+                category === filter
             ) {
 
-                item.style.display = "";
+                item.style.display =
+                    "";
 
             } else {
 
-                item.style.display = "none";
+                item.style.display =
+                    "none";
             }
         });
+
+        // Show/hide section titles
+        portfolioSections.forEach(
+            section => {
+
+            const sectionType =
+            section.getAttribute(
+                "data-section"
+            );
+
+            if (
+                filter === "all" ||
+                sectionType === filter
+            ) {
+
+                section.style.display =
+                    "block";
+
+            } else {
+
+                section.style.display =
+                    "none";
+            }
+        });
+
     });
+
 });
 </script>
+
   
 
 </body>
