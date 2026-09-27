@@ -26,6 +26,7 @@ Web Developer Nigeria,
 AI Engineer Nigeria,
 Electronics Engineer Nigeria,
 AUS CEO,
+Aus Technologies ceo,
 Portfolio Website,
 Software Developer Awka
 ">
@@ -45,9 +46,7 @@ content="https://austineyoung.vercel.app/assets/img/me.jpg">
 content="https://austineyoung.vercel.app">
 
   <title>
-Austine Young (Nweze Augustine) |
-App Developer, AI/ML Engineer &
-Electronics Engineer
+Austine Young (Nweze Augustine Chukwuka) Portfolio
 </title>
 
   <link href="assets/img/aus.png" rel="icon">
@@ -74,33 +73,94 @@ Electronics Engineer
     align-items:center;
 }
 
+.buy-btn{
+    background: rgba(26, 78, 2, 0.295);
+    backdrop-filter: blur(5px) saturate(100%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow:
+    inset 0 1px 1px rgba(0,0,0,0.6)
+    inset 0 -1px 1px rgba(0,0,0,0.1)
+    0 8px 32px rgba(0,0,0,0.15);
+    color: rgb(248, 248, 248);
+    mix-blend-mode: normal;
+    padding:14px 28px;
+    border-radius: 20px;
+    cursor:pointer;
+    transition:0.35s ease;
+    font-size:15px;
+    font-weight:600;
+    margin-top: 10px;
+
+}
+.buy-btn:hover{
+    transform: translateY(-2px);
+    opacity: 1;
+    pointer-events: auto;
+    color: rgb(165, 162, 162);
+    backdrop-filter: blur(1.5px) saturate(100%);
+    -webkit-backdrop-filter: blur(1.5px) saturate(100%);
+}
+
 .filter-btn{
     background: rgba(0,255,100,0.08);
-    border:1px solid rgba(0,255,100,0.25);
+    border:1px solid rgba(0,255,100,0.1);
     color:#bdbdbd;
-    padding:12px 22px;
+    padding:10px 20px;
     border-radius:50px;
     cursor:pointer;
     transition:0.35s ease;
     font-size:15px;
     font-weight:600;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px) saturate(100%);
+    
+    -webkit-backdrop-filter: blur(2px) saturate(100%);
+    box-shadow:
+    inset 0 1px 1px rgba(0,0,0,0.6)
+    inset 0 -1px 1px rgba(0,0,0,0.1)
+    0 8px 32px rgba(0,0,0,0.15);
 }
 
 .filter-btn:hover{
     transform: translateY(-3px);
     color:#fff;
     border-color:#00ff66;
-    box-shadow:0 0 20px rgba(0,255,100,0.25);
+    box-shadow:0 0 10px rgba(0,255,100,0.25);
 }
 
 .filter-btn.active{
     background:#00c853;
     color:#000;
     border-color:#00ff66;
-    box-shadow:0 0 20px rgba(0,255,100,0.5);
+    box-shadow:0 0 20px rgba(0,255,100,0.2);
+}
+.preview-btn{
+    background: rgba(0, 255, 102, 0.904);
+    border:1px solid rgb(0, 17, 7);
+    color:#1b1a1ad8;
+    padding:10px 20px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.35s ease;
+    font-size:15px;
+    font-weight:600;
+    backdrop-filter: blur(2px) saturate(100%);
+    
+    -webkit-backdrop-filter: blur(2px) saturate(100%);
+    box-shadow:
+    inset 0 1px 1px rgba(0,0,0,0.6)
+    inset 0 -1px 1px rgba(0,0,0,0.1)
+    0 8px 32px rgba(0,0,0,0.15);
 }
 
+.preview-btn:hover{
+  background: rgba(0, 255, 102, 0.322);
+    transform: translateY(-2px);
+    border: none;
+    color:#251f1fcc;
+    backdrop-filter: blur(5px) saturate(100%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%);
+}
 
   #menuArrow{
     position: fixed;
@@ -160,11 +220,11 @@ Electronics Engineer
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
-      <h1><a href="#about" class="change nav-link" style="color: #4caf50;">Nweze Augustine</a></h1>
-      <h2>Electronics And Computer Engineering Student <br><br>
-      <span>App/ Website Developer</span>
-      <br><br><span>AI/ ML Engr</span>  <br><br><span>IT Consultant</span>
-        <br><br><span>3D Artist</span>
+      <h1><a href="#about" class="change nav-link" style="color: #4caf50;">Nweze Augustine Chukwuka</a></h1>
+      <h2>Electronics And Computer Engineering Student (AKA: The whole IT Department)<br><br>
+      <span>Software Developer</span>
+      <br><br><span>3D Designer</span>  <br><br><span>AI/ML Engr</span>
+        <br><br><span>Ethical Hacker</span>
     <br>    <br><span>Others..</span>
       </h2>
       <nav id="navbar" class="navbar">
@@ -182,7 +242,9 @@ Electronics Engineer
                   class="bi bi-linkedin"></i></a>
               <a href="https://github.com/austine-young-coder" target="_blank" class="github"><i class="bi bi-github"></i></a>
                <a href="https://x.com/_austineyoung" target="_blank" class="X"><i class="bi bi-twitter"></i></a>
-              <a href="https://m.facebook.com/austineyoung001" target="_blank" class="Facebook"><i class="bi bi-facebook"></i></a>  </div>
+              <a href="https://m.facebook.com/austineyoung001" target="_blank" class="Facebook"><i class="bi bi-facebook"></i></a> 
+            <a href="https://tiktok.com/austineyoung" target="_blank" class="Facebook"><i class="bi bi-tiktok"></i></a>
+           </div>
     </div>
   </header><!-- End Header -->
 
@@ -229,66 +291,82 @@ Electronics Engineer
     <div class="interests container">
       <div class="section-title">
         <h2>Skills</h2>
+        <p>Software development</p>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="col-lg-auto col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
             <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
             <h3>HTML5 and Bootstrap</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+        <div class="col-lg-auto col-md-4 mt-4 mt-lg-0">
           <div class="icon-box">
             <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-            <h3>CSS, Tailwind</h3>
+            <h3>Tailwind CSS</h3>
           </div>
         </div>
-          <div class="col-lg-3 col-md-4 mt-4">
+          <div class="col-lg-auto col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-            <h3>React Native, Typescript and NextJs</h3>
+            <i class="ri-file-list-3-line" style="color: #11dbb9;"></i>
+            <h3>React Native & Typescript</h3>
           </div>
         </div>
-      
-        <div class="col-lg-3 col-md-4 mt-4">
+       <div class="col-lg-auto col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-database-2-line" style="color: #47aeff;"></i>
-            <h3>MySQL</h3>
+            <i class="ri-snake-line" style="color: #33c5ff;"></i>
+            <h3>Python</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+       
+        <div class="col-lg-auto col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-database-2-line" style="color: #4778ff;"></i>
+            <h3>MySQL  & NoSql</h3>
+          </div>
+        </div>
+        <div class="col-lg-auto col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
             <h3>Node.JS</h3>
           </div>
         </div>
         
-        
-        <div class="col-lg-3 col-md-4 mt-4">
+        <br><br><br>
+       
+        <div class="section-title">
+        <h2>Skills</h2>
+        <p>Engineering</p>
+      </div>
+         <div class="col-lg-auto col-md-4 mt-4 mt-md-0">
           <div class="icon-box">
-            <i class="ri-store-line" style="color: #ffbb2c;"></i>
-            <h3>Matlab/ Java</h3>
+            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+            <h3>Solidworks, Proteus, AutoCAD and Blender</h3>
           </div>
         </div>
-     
-        <div class="col-lg-3 col-md-4 mt-4">
+
+         <div class="col-lg-auto col-md-4 mt-4">
+          <div class="icon-box">
+            <i class="ri-anchor-line" style="color: #b2904f;"></i>
+            <h3>Robotics, Embedded Systems Design</h3>
+          </div>
+        </div>
+
+         <div class="col-lg-auto col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
             <h3>Avionics</h3>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 mt-4">
+        
+        <div class="col-lg-auto col-md-4 mt-4">
           <div class="icon-box">
-            <i class="ri-anchor-line" style="color: #b2904f;"></i>
-            <h3>Robotics, Embedded Systems Design</h3>
-          </div>
-        </div><br><br>
-         <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-            <h3>Solidworks, AutoCAD and Blender</h3>
+            <i class="ri-store-line" style="color: #ffbb2c;"></i>
+            <h3>Matlab & R</h3>
           </div>
         </div>
+     
+       
        
       </div>
 
@@ -360,7 +438,9 @@ Electronics Engineer
               <div class="portfolio-info">
                 <h4>Portfolio Website</h4>
                 <p>I have created mutiple portfolio websites using different templates</p>
-                <a href="https://austineyoung.vercel.app" class="btn btn-primary" target="_blank">Preview</a>
+                <br><b>html5, Tailwind Css, Bootsrap and Javascript</b>
+                <a href="https://austineyoung.vercel.app" class="preview-btn" target="_blank">Preview</a>
+                <a href="https://austineyoung.vercel.app" class="buy-btn btn-primary" target="_blank">Buy</a>
               </div>
             </div>
           </div>
@@ -368,9 +448,9 @@ Electronics Engineer
             <div class="portfolio-wrap">
               <img src="assets/img/hsp.jpg" class="img-fluid" alt="Austine Young Portfolio">
               <div class="portfolio-info">
-                <h4>Religion Website</h4>
+                <h4>Church Website</h4>
                 <p>Holy Spirit Catholic Church Omagba Onitsha Website</p>
-                <a href="https://holyspiritomagba.vercel.app" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="https://holyspiritomagba.vercel.app" class="preview-btn" target="_blank">Preview</a>
               </div>
             </div>
           </div>
@@ -380,7 +460,7 @@ Electronics Engineer
               <div class="portfolio-info">
                 <h4>FloodQuest</h4>
                 <p>An app interface for a smart flood detecting system</p>
-                <a href="https://flood.vercel.app" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="https://flood.vercel.app" class="preview-btn" target="_blank">Preview</a>
               </div>
             </div>
           </div>
@@ -388,7 +468,7 @@ Electronics Engineer
 
       
         
-  
+  <!--Ai Side-->
      </div>
 </div>
       <div class="portfolio-category" data-section="ai">
@@ -400,49 +480,89 @@ Electronics Engineer
               <div class="portfolio-info">
                 <h4>Arti-Nil (app Development)</h4>
                 <p>AI content checker app</p>
-                <a href="https://arti-nil.vercel.app" class="btn btn-primary" target="_blank">Preview</a>
+                <a href="https://arti-nil.vercel.app" class="preview-btn" target="_blank">Preview</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-       
+       <!--3d side-->
       <div class="portfolio-category" data-section="3d">
         <h3>3D Modelling</h3>
         <div class="row portfolio-container">
-          <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
+
+           <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
             <div class="portfolio-wrap">
-              <img src="assets/img/itel phone.PNG" class="img-fluid" alt="2D Track-and-Run Game">
+              <img src="assets/img/robotarm2.PNG" class="img-fluid" alt="2D Track-and-Run Game">
               <div class="portfolio-info">
-                <h4>Itel A06</h4>
-                <p><i>Itel A06 Remodeling in Solidworks</i></p>
-                <a href="-" class="btn btn-primary" target="_blank">Preview</a>
+                <h4>Idustrial Robot Arm</h4>
+                
+                <a href="3d_objects/ENSAMBLE.HTML" class="preview-btn" target="_blank">3D Preview</a>
+                <a href="https://whatsapp.com/2348109352330" class="buy-btn btn-primary" target="_blank">Buy this model</a>
               </div>
             </div>
           </div>
 
- <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
+          
+      
+          <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
+            <div class="portfolio-wrap">
+              <img src="assets/img/ip17.PNG" class="img-fluid" alt="2D Track-and-Run Game">
+              <div class="portfolio-info">
+                <h4>Iphone 17 pro max</h4>
+                
+                <a href="3d_objects/iphone_17.HTML" class="preview-btn" target="_blank">3D Preview</a>
+                <a href="https://whatsapp.com/2348109352330" class="buy-btn btn-primary" target="_blank"><b>Buy this model</b></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
+            <div class="portfolio-wrap">
+              <img src="assets/img/robotarm1.PNG" class="img-fluid" alt="2D Track-and-Run Game">
+              <div class="portfolio-info">
+                <h4>IRKAmk</h4>
+                <p></p>
+                <a href="3d_objects/IRAmk4.HTML" class="preview-btn" target="_blank">3D Preview</a>
+                <a href="https://whatsapp.com/2348109352330" class="buy-btn btn-primary" target="_blank"><b>Buy this model</b></a>
+              </div>
+            </div>
+          </div>
+              <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
             <div class="portfolio-wrap">
               <img src="assets/img/gamepad.PNG" class="img-fluid" alt="2D Track-and-Run Game">
               <div class="portfolio-info">
                 <h4>Gamepad</h4>
-                <p><i>UNAVIALABLE</i></p>
-                <a href="#" class="btn btn-primary" target="_blank">Preview</a>
+                <br>
+                made with solidworks visualizer
+                <a href="https://whatsapp.com/2348109352330" class="buy-btn btn-primary" target="_blank">Buy this model</a>
+              </div>
+            </div>
+          </div>
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
+            <div class="portfolio-wrap">
+              <img src="assets/img/gotv.PNG" class="img-fluid" alt="2D Track-and-Run Game">
+              <div class="portfolio-info">
+                <h4>GOTv Decoder</h4>
+                <p></p>
+                <a href="3d_objects/gotv.HTML" class="preview-btn" target="_blank">3D Preview</a>
+                <a href="https://whatsapp.com/2348109352330" class="buy-btn btn-primary" target="_blank"><b>Buy this model</b></a>
+              </div>
+            </div>
+          </div>
+           <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
+            <div class="portfolio-wrap">
+              <img src="assets/img/apartment1.PNG" class="img-fluid" alt="2D Track-and-Run Game">
+              <div class="portfolio-info">
+                <h4>4 Bedroom Apartment</h4>
+                <p>Designed in <b>solidworks</b></p>
+                <a href="3d_objects/apartment 1.HTML" class="preview-btn" target="_blank">3D Preview</a>
+                <a href="https://whatsapp.com/2348109352330" class="buy-btn btn-primary" target="_blank"><b>Buy this model</b></a>
               </div>
             </div>
           </div>
 
-           <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
-            <div class="portfolio-wrap">
-              <img src="assets/img/gotv.PNG" class="img-fluid" alt="2D Track-and-Run Game">
-              <div class="portfolio-info">
-                <h4>GOTv Decoder/h4>
-                <p><i>UNAVIALABLE</i></p>
-                <a href="#" class="btn btn-primary" target="_blank">Preview</a>
-              </div>
-            </div>
-          </div>
+           
 
            <div class="col-lg-4 col-md-6 portfolio-item" data-category="3d">
             <div class="portfolio-wrap">
@@ -502,6 +622,7 @@ Electronics Engineer
               <a href="https://github.com/austine-young-coder" target="_blank" class="github"><i class="bi bi-github"></i></a>
                <a href="https://x.com/_austineyoung" target="_blank" class="X"><i class="bi bi-twitter"></i></a>
               <a href="https://m.facebook.com/austineyoung001" target="_blank" class="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://tiktok.com/austineyoung" target="_blank" class="Facebook"><i class="bi bi-tiktok"></i></a>
            </div>
           </div>
         </div>
